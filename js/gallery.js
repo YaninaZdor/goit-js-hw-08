@@ -86,7 +86,6 @@ const galleryMarkup = images
 
 galleryContainer.innerHTML = galleryMarkup;
 
-// Прослуховування кліку на всю галерею
 galleryContainer.addEventListener("click", onGalleryItemClick);
 
 function onGalleryItemClick(event) {
