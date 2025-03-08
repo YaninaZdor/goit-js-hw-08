@@ -98,20 +98,9 @@ function onGalleryItemClick(event) {
 
   const largeImageURL = clickedImage.dataset.source;
 
-  const instance = basicLightbox.create(`
-        <img src="${largeImageURL}" width="1112" height="640">
-    `);
+  const instance = basicLightbox.create(
+    `<img src="${largeImageURL}" width="1112" height="640">`
+  );
 
   instance.show();
-
-  // Додаємо обробник для закриття по Escape
-  document.addEventListener("keydown", onEscKeyPress);
-
-  // Функція для закриття модалки по Escape
-  function onEscKeyPress(e) {
-    if (e.key === "Escape") {
-      instance.close();
-      document.removeEventListener("keydown", onEscKeyPress);
-    }
-  }
 }
